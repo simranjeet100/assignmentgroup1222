@@ -13,3 +13,16 @@ namespace assignmentgroup
         }
     }
 }
+class JournalEntry
+{
+    public JournalEntry(string note, int dist)
+    {
+        villageName = note; distanceTraveled = dist;
+        HowFarToGetBack = distanceTraveled;
+    }
+    public int HowFarToGetBack = 0;
+    private string villageName;
+    private int distanceTraveled;
+    public int getDistanceWalked() { return distanceTraveled; }
+    public string getVillageName() { return villageName; }
+}
