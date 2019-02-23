@@ -1,14 +1,11 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
-namespace groupassigment
-{
 
-}
 class JournalEntry
 {
     public JournalEntry(string note, int dist)
@@ -47,6 +44,13 @@ class Hugi
 
 class CountrySide
 {
+
+    /* 
+     * SIMRANJEET KAUR C0727100
+     * HARPREET SINGH C0727128
+     * MANDEEP SINGH C0732152
+     * GURJINDER SINGH C0730319
+     */
     static void Main()
     {
         CountrySide a = new CountrySide();
@@ -94,8 +98,8 @@ class CountrySide
         Schvenig = new Village("Schvenig", false);
         Wessig = new Village("Wessig", false);
         Maeland = new Village("Maeland", false);
-        Helmholtz = new Village("helmholtz", true);
-        Uster = new Village("Uster", false);
+        Helmholtz = new Village("helmholtz", false);
+        Uster = new Village("Uster", true);
         Badden = new Village("Badden", false);
 
         Alst.VillageSetup(0, Schvenig, Wessig);
@@ -114,14 +118,12 @@ class CountrySide
     {
         try
         {
-            // Create an instance of StreamReader to read from a file.
-            // The using statement also closes the StreamReader.
-            using (StreamReader sr = new StreamReader("c:/area51/annoucement.txt"))
+
+            using (StreamReader sr = new StreamReader("U:/Users/727100/annoucement.txt"))
             {
                 string line;
 
-                // Read and display lines from the file until 
-                // the end of the file is reached. 
+
                 while ((line = sr.ReadLine()) != null)
                 {
                     Console.WriteLine(line);
@@ -130,7 +132,7 @@ class CountrySide
         }
         catch (Exception e)
         {
-            // Let the user know what went wrong.
+
             Console.WriteLine("The file could not be read:");
             Console.WriteLine(e.Message);
         }
@@ -159,8 +161,3 @@ class Village
     public int distanceFromPreviousVillage;
     public bool isAstrildgeHere;
 }
-
-
-
-
-
