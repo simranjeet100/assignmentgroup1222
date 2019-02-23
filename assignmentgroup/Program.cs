@@ -153,11 +153,7 @@ class Village
         distanceFromPreviousVillage = _prevVillageDist;
     }
 
-    public Village west;
-    public Village east;
-    public string VillageName;
-    public int distanceFromPreviousVillage;
-    public bool isAstrildgeHere;
+   
 }
 
 
